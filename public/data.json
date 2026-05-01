@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with elegant blue glaze finish",
+    "image": "https://images.pexels.com/photos/7078686/pexels-photo-7078686.jpeg",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Wood Look Porcelain Plank",
+    "description": "Realistic light oak wood effect porcelain tile",
+    "image": "https://images.pexels.com/photos/2213495/pexels-photo-2213495.jpeg",
+    "category": "porcelain",
+    "price": 52.5,
+    "currency": "USD",
+    "dimensions": "20x120 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Marble Effect White Tile",
+    "description": "Luxurious white marble look porcelain tile with subtle veining",
+    "image": "https://images.pexels.com/photos/4249687/pexels-photo-4249687.jpeg",
+    "category": "marble",
+    "price": 68.75,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_004",
+    "title": "Grey Matte Ceramic Tile",
+    "description": "Modern matte finish grey ceramic wall and floor tile",
+    "image": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    "category": "ceramic",
+    "price": 38.99,
+    "currency": "USD",
+    "dimensions": "30x60 cm",
+    "material": "Ceramic",
+    "inStock": false
+  },
+  {
+    "id": "tile_005",
+    "title": "Terrazzo Pattern Tile",
+    "description": "Trendy terrazzo design with multi-color chips",
+    "image": "https://images.pexels.com/photos/48889/cleaning-washing-cleanup-the-ilo-48889.jpeg",
+    "category": "terrazzo",
+    "price": 55.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_006",
+    "title": "Black Glossy Porcelain Tile",
+    "description": "Deep black glossy porcelain tile for modern interiors",
+    "image": "https://images.pexels.com/photos/7078686/pexels-photo-7078686.jpeg",
+    "category": "porcelain",
+    "price": 62.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_007",
+    "title": "Beige Stone Effect Tile",
+    "description": "Natural beige stone look tile with textured surface",
+    "image": "https://images.pexels.com/photos/2213495/pexels-photo-2213495.jpeg",
+    "category": "stone",
+    "price": 48.5,
+    "currency": "USD",
+    "dimensions": "40x80 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_008",
+    "title": "Geometric Pattern Wall Tile",
+    "description": "Decorative geometric patterned ceramic wall tile",
+    "image": "https://images.pexels.com/photos/4249687/pexels-photo-4249687.jpeg",
+    "category": "decorative",
+    "price": 41.25,
+    "currency": "USD",
+    "dimensions": "20x20 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_009",
+    "title": "Dark Walnut Wood Look Tile",
+    "description": "Rich dark walnut wood effect large format tile",
+    "image": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    "category": "porcelain",
+    "price": 59.99,
+    "currency": "USD",
+    "dimensions": "20x120 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_010",
+    "title": "White Subway Tile",
+    "description": "Classic glossy white subway ceramic tile",
+    "image": "https://images.pexels.com/photos/7078686/pexels-photo-7078686.jpeg",
+    "category": "ceramic",
+    "price": 29.99,
+    "currency": "USD",
+    "dimensions": "10x30 cm",
+    "material": "Ceramic",
+    "inStock": true
+  }
+]
