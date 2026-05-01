@@ -5,7 +5,7 @@ import React from "react";
 const Banner = () => {
   return (
     <>
-      <div className="bg-[url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center shadow-2xl">
+      <div className="bg-[url('https://images.pexels.com/photos/4249687/pexels-photo-4249687.jpeg')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center shadow-2xl">
         <div className="w-full h-full bg-black/50 flex items-center ">
           <div className="max-w-7xl mx-auto px-6 text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
