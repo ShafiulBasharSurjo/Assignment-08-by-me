@@ -36,6 +36,7 @@ const NewArrivals = () => {
           direction="left"
           scrollamount="7"
           scrolldelay="40"
+          pauseOnHover={true}
         >
           {newTiles.map((tile) => (
             <span key={tile.id} className="mx-4">

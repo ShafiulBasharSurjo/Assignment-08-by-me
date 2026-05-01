@@ -9,14 +9,16 @@ const Navbar = () => {
       <div className="border-b px-2 bg-amber-100">
         <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
           <div className="flex gap-2 items-center">
-            <Image
-              src={logo}
-              alt="logo"
-              loading="eager"
-              width={80}
-              height={80}
-              className="object-cover h-auto w-auto"
-            />
+            <Link href={"/"}>
+              <Image
+                src={logo}
+                alt="logo"
+                loading="eager"
+                width={80}
+                height={80}
+                className="object-cover h-auto w-auto"
+              />
+            </Link>
           </div>
 
           <ul className="flex items-center gap-5 text-sm">
@@ -24,12 +26,18 @@ const Navbar = () => {
               <Link href={"/"}>Home</Link>
             </li>
             <li>
-              <Link href={"/all-photos"}>All Tiles</Link>
+              <Link href={"/All-tiles"}>All Tiles</Link>
             </li>
             <li>
               <Link href={"/profile"}>My Profile</Link>
             </li>
           </ul>
+
+          <div className="flex justify-end gap-1">
+            <button className="btn bg-blue-950 text-white ">Sign-up</button>
+
+            <button className="btn bg-blue-950 text-white ">Login</button>
+          </div>
 
           <div className="flex gap-4">
             {/* {!user && (
