@@ -34,9 +34,13 @@ const Navbar = () => {
           </ul>
 
           <div className="flex items-center gap-1">
-            <button className="btn bg-blue-950 text-white ">Sign-up</button>
+            <NavLink href={"/register"}>
+              <button className="btn bg-blue-950 text-white ">Sign-up</button>
+            </NavLink>
 
-            <button className="btn bg-blue-950 text-white ">Login</button>
+            <NavLink href={"/login"}>
+              <button className="btn bg-blue-950 text-white ">Login</button>
+            </NavLink>
           </div>
 
           {/* <div className="flex gap-4"> */}
