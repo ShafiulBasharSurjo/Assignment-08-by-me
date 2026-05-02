@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "@/Assets/logo.png";
 import Image from "next/image";
-import Link from "next/link";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="border-b px-2 bg-amber-100">
         <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
           <div className="flex gap-2 items-center">
-            <Link href={"/"}>
+            <NavLink href={"/"}>
               <Image
                 src={logo}
                 alt="logo"
@@ -18,18 +18,18 @@ const Navbar = () => {
                 height={80}
                 className="object-cover h-auto w-auto"
               />
-            </Link>
+            </NavLink>
           </div>
 
           <ul className="flex items-center gap-5 text-sm">
             <li>
-              <Link href={"/"}>Home</Link>
+              <NavLink href={"/"}>Home</NavLink>
             </li>
             <li>
-              <Link href={"/All-tiles"}>All Tiles</Link>
+              <NavLink href={"/All-tiles"}>All Tiles</NavLink>
             </li>
             <li>
-              <Link href={"/profile"}>My Profile</Link>
+              <NavLink href={"/profile"}>My Profile</NavLink>
             </li>
           </ul>
 

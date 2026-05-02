@@ -1,4 +1,5 @@
-import Banner from "@/Components/Shared/Banner";
+import HomePage from "@/Components/HomePage/card";
+import Banner from "@/Components/HomePage/Banner";
 import NewArrivals from "@/Components/Shared/NewArrivals";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Banner />
       <NewArrivals />
+      <HomePage />
     </>
   );
 }

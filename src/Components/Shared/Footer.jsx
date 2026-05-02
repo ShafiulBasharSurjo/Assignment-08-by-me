@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="relative mt-24 bg-amber-100">
+      <footer className="relative mt-24 bg-amber-100 overflow-hidden">
         <div className="mt-12 h-px w-full" />
         <div
           className="absolute inset-0 -z-10 bg-linear-to-tr 
@@ -39,7 +39,7 @@ const Footer = () => {
               <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <li>
                   <Link
-                    href="/All-Tiles"
+                    href={"/All-tiles"}
                     className="hover:text-black dark:hover:text-white transition"
                   >
                     All Tiles
@@ -108,7 +108,7 @@ const Footer = () => {
               <Link
                 href="/signup"
                 className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
-              bg-black text-white dark:bg-white dark:text-black 
+              bg-blue-950 text-white dark:bg-white dark:text-black 
               text-sm font-medium transition-all duration-200 
               hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10"
               >
@@ -118,7 +118,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
-          <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+          <div className="mt-6 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
             <p>
               © {new Date().getFullYear()} tiles gallery. All rights reserved.
             </p>
