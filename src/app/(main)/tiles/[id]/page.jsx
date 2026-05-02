@@ -91,7 +91,7 @@ const TileDetailsPage = async ({ params }) => {
               <span className="text-gray-700">{tile.dimensions}</span>
             </div>
 
-            <div className="h-px" />
+            <div className="h-px bg-gray-200" />
 
             <Link
               href="/All-tiles"
