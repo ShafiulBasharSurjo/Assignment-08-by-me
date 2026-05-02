@@ -33,14 +33,14 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="flex justify-end gap-1">
+          <div className="flex items-center gap-1">
             <button className="btn bg-blue-950 text-white ">Sign-up</button>
 
             <button className="btn bg-blue-950 text-white ">Login</button>
           </div>
 
-          <div className="flex gap-4">
-            {/* {!user && (
+          {/* <div className="flex gap-4"> */}
+          {/* {!user && (
               <ul className="flex items-center  text-sm gap-5">
                 <li>
                   <Link href={"/signup"}>SignUp</Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
               </ul>
             )} */}
 
-            {/* {user && (
+          {/* {user && (
               <div className="flex gap-3">
                 <Avatar size="sm">
                   <Avatar.Image
@@ -66,8 +66,8 @@ const Navbar = () => {
                   SignOut
                 </Button>
               </div> */}
-            {/* )} */}
-          </div>
+          {/* )} */}
+          {/* </div> */}
         </nav>
       </div>
     </>
