@@ -8,16 +8,16 @@ const Banner = () => {
       <div className="bg-[url('https://images.pexels.com/photos/4249687/pexels-photo-4249687.jpeg')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center shadow-2xl">
         <div className="w-full h-full bg-black/50 flex items-center ">
           <div className="max-w-7xl mx-auto px-6 text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl animate__animated animate__fadeInDown">
               Turn Dreams into Reality
             </h1>
-            <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-200">
+            <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-200 animate__animated animate__fadeInUp animate__delay-1s">
               Get high-quality tile for reasonable price.
             </p>
 
             <div className="flex gap-4">
-              <Link href="#">
-                <Button className="bg-slate-800 hover:bg-slate-900 text-white">
+              <Link href="/All-tiles">
+                <Button className="bg-slate-800 hover:bg-slate-900 text-white animate__animated animate__zoomIn animate__delay-2s">
                   Browse Now
                 </Button>
               </Link>

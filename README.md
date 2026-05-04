@@ -1,5 +1,33 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Student requirement: My Profile page
+
+Build a **My Profile** page at route `/profile` that shows the currently logged-in user’s profile data and allows updating **name** and **image URL**.
+
+### What to show (read-only)
+
+- **User name** (from session user)
+- **User email** (from session user)
+- **User avatar/image** (from session user)
+
+### Update feature (required)
+
+- Add a form with two fields:
+  - **Name**
+  - **Image URL**
+- On submit, update the logged-in user using Better Auth:
+
+```js
+await authClient.updateUser({
+  name,
+  image,
+});
+```
+
+### Access control (required)
+
+- If the user is **not logged in**, the page should show a message and a link/button to `/login`.
+
 ## Getting Started
 
 First, run the development server:
