@@ -12,7 +12,7 @@ const LoginPage = (data) => {
 
   return (
     <>
-      <div className="container mx-auto min-h-[80vh] flex items-center justify-center bg-slate-100">
+      <div className="container mx-auto min-h-[80vh] flex items-center justify-center">
         <div className="p-4 rounded-lg bg-amber-100 max-w-md">
           <h2 className="text-3xl font-bold mb-4 text-center">
             Login your account

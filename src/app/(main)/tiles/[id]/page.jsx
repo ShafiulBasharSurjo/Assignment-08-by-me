@@ -17,10 +17,15 @@ const TileDetailsPage = async ({ params }) => {
   }
   return (
     <>
-      <div className="min-h-screen bg-white py-12 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Left — Image */}
-          <div className="w-full overflow-hidden bg-white">
+      <div className="min-h-screen bg-white py-12 px-4 flex items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start bg-amber-100 p-6 rounded-lg">
+          <div className="w-full overflow-hidden bg-blue-950 rounded-lg">
+            <p className="text-xs text-gray-400 uppercase tracking-[4px] mb-2 px-5 mt-1">
+              {tile.category}
+            </p>
+            <h1 className="text-2xl font-bold uppercase tracking-widest text-white mb-4 px-10">
+              {tile.title}
+            </h1>
             <Image
               src={tile.image}
               alt={tile.title}
@@ -28,18 +33,15 @@ const TileDetailsPage = async ({ params }) => {
               height={700}
               className="w-full h-full object-cover"
             />
-            <p className="text-lg text-gray-500 mt-2">{tile.description}</p>
           </div>
 
-          {/* Right — Details */}
           <div className="flex flex-col gap-6 py-4">
-            {/* Category + Title */}
             <div>
               <p className="text-xs text-gray-400 uppercase tracking-[4px] mb-2">
-                {tile.category}
+                Tiles Details
               </p>
-              <h1 className="text-2xl font-bold uppercase tracking-widest text-gray-900">
-                {tile.title}
+              <h1 className="text-xl font-bold uppercase tracking-widest text-gray-900">
+                {tile.description}
               </h1>
             </div>
 
@@ -49,7 +51,6 @@ const TileDetailsPage = async ({ params }) => {
 
             <div className="h-px bg-gray-200" />
 
-            {/* Stock urgency */}
             <div className="flex flex-col gap-2">
               <p className="text-xs uppercase tracking-widest text-gray-500">
                 {tile.inStock ? tile.inStock : 0} in stock
@@ -58,7 +59,6 @@ const TileDetailsPage = async ({ params }) => {
 
             <div className="h-px bg-gray-200" />
 
-            {/* Attributes */}
             <div className="flex flex-col gap-3">
               {tile.size && (
                 <div className="flex items-center gap-4">
@@ -97,7 +97,7 @@ const TileDetailsPage = async ({ params }) => {
               href="/All-tiles"
               className="text-xs uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors mt-2 w-fit"
             >
-              ← Back to All Tiles
+              ← All Tiles Page
             </Link>
           </div>
         </div>

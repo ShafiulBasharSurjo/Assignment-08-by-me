@@ -6,13 +6,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="relative mt-24 bg-amber-100 overflow-hidden">
-        <div className="mt-12 h-px w-full" />
-        <div
-          className="absolute inset-0 -z-10 bg-linear-to-tr 
-        from-purple-500/5 via-transparent to-blue-500/5 
-        dark:from-purple-500/10 dark:to-blue-500/10 blur-3xl"
-        />
+      <footer className="relative bg-amber-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="space-y-4">
