@@ -2,7 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const LoginPage = (data) => {
   const {
@@ -10,6 +10,14 @@ const LoginPage = (data) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const handleGoogleLogin = async () => {
+    const { data } = await authClient.signIn.social({
+      provider: "google",
+    });
+
+    console.log(data, "google login");
+  };
 
   const [showPassword, setShowPassword] = useState(false);
   const handleLogin = async (data) => {
@@ -61,6 +69,10 @@ const LoginPage = (data) => {
             </fieldset>
             <button className="btn w-full bg-blue-950 text-white">Login</button>
           </form>
+          <button className="btn w-full mt-1" onClick={handleGoogleLogin}>
+            <FaGoogle className="inline mr-2" />
+            Login with Google
+          </button>
 
           <p className="mt-2">
             Donot have an account?
