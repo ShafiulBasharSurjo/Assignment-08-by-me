@@ -62,3 +62,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### Environment variables (production)
+
+Set these in the Vercel project **Settings → Environment Variables** (Production + Preview as needed):
+
+| Variable | Purpose |
+| --- | --- |
+| `MONGODB_URI` | Better Auth MongoDB adapter |
+| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | Google OAuth |
+| `BETTER_AUTH_URL` | Public site URL, e.g. `https://your-app.vercel.app` (no trailing slash). Used for OAuth callbacks and server-side auth. |
+
+### Google OAuth after deploy
+
+In [Google Cloud Console](https://console.cloud.google.com/) → your OAuth client → **Authorized JavaScript origins**, add:
+
+- `https://your-app.vercel.app`
+
+Under **Authorized redirect URIs**, add:
+
+- `https://your-app.vercel.app/api/auth/callback/google`
+
+Use your real Vercel domain (and add preview URLs if you test preview deployments).

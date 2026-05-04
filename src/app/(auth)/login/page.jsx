@@ -12,11 +12,12 @@ const LoginPage = (data) => {
   } = useForm();
 
   const handleGoogleLogin = async () => {
-    const { data } = await authClient.signIn.social({
+    const { data, error } = await authClient.signIn.social({
       provider: "google",
+      callbackURL: `${window.location.origin}/`,
     });
-
-    console.log(data, "google login");
+    if (error) console.error("Google sign-in:", error);
+    else console.log(data, "google login");
   };
 
   const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +26,7 @@ const LoginPage = (data) => {
       email: data.email,
       password: data.password,
       rememberMe: true,
-      callbackURL: "http://localhost:3000",
+      callbackURL: `${window.location.origin}/`,
     });
   };
 

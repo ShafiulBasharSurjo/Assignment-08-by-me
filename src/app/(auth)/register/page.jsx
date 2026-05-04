@@ -17,7 +17,7 @@ const RegisterPage = () => {
       password: data.password,
       name: data.name,
       image: data.photoUrl,
-      callbackURL: "/",
+      callbackURL: `${window.location.origin}/`,
     });
     if (error) {
       console.error("Registration error:", error);

@@ -8,6 +8,16 @@ const client = new MongoClient(process.env.MONGODB_URI);
 const db = client.db("tiles-gallery");
 
 export const auth = betterAuth({
+  ...(process.env.BETTER_AUTH_URL
+    ? { baseURL: process.env.BETTER_AUTH_URL }
+    : {}),
+
+  trustedOrigins: [
+    "http://localhost:3000",
+    ...(process.env.BETTER_AUTH_URL ? [process.env.BETTER_AUTH_URL] : []),
+    "https://*.vercel.app",
+  ],
+
   database: mongodbAdapter(db, {
     client,
   }),

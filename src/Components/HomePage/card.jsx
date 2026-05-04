@@ -1,28 +1,14 @@
+import tilesData from "@/Assets/data.json";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-async function getData() {
-  try {
-    const res = await fetch("http://localhost:3000/data.json", {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      Error("Failed to fetch data");
-    }
-
-    const data = await res.json();
-
-    return Array.isArray(data) ? data : data.data || [];
-  } catch (error) {
-    console.error("Fetch error:", error);
-    return [];
-  }
+function getData() {
+  return Array.isArray(tilesData) ? tilesData : tilesData.data || [];
 }
 
 export default async function HomePage() {
-  const datas = await getData();
+  const datas = getData();
   const featuredTiles = datas?.slice(0, 4) || [];
 
   return (
