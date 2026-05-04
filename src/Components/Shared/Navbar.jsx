@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import "animate.css";
 import logo from "@/Assets/logo.png";
 import Image from "next/image";
 import NavLink from "./NavLink";
@@ -53,7 +54,9 @@ const Navbar = () => {
               </>
             ) : (
               <div className="flex items-center gap-3">
-                <h2>Hello, {user.name}</h2>
+                <h2 className="animate__animated animate__fadeIn animate__slower">
+                  Hello, {user.name}
+                </h2>
                 <button
                   className="btn bg-blue-950 text-white"
                   onClick={async () => await authClient.signOut()}

@@ -1,6 +1,7 @@
 import { Button } from "@heroui/react";
 import Link from "next/link";
 import React from "react";
+import "animate.css";
 
 const Banner = () => {
   return (
