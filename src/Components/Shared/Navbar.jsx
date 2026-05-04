@@ -1,9 +1,15 @@
+"use client";
 import React from "react";
 import logo from "@/Assets/logo.png";
 import Image from "next/image";
 import NavLink from "./NavLink";
+import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user;
+  console.log(user, isPending, "user");
+
   return (
     <>
       <div className="border-b px-2 bg-amber-100">
@@ -32,46 +38,32 @@ const Navbar = () => {
               <NavLink href={"/profile"}>My Profile</NavLink>
             </li>
           </ul>
-
           <div className="flex items-center gap-1">
-            <NavLink href={"/register"}>
-              <button className="btn bg-blue-950 text-white ">Sign-up</button>
-            </NavLink>
-
-            <NavLink href={"/login"}>
-              <button className="btn bg-blue-950 text-white ">Login</button>
-            </NavLink>
+            {isPending ? (
+              <span className="loading loading-dots loading-lg"></span>
+            ) : !user ? (
+              <>
+                <NavLink href="/register">
+                  <button className="btn bg-blue-950 text-white">
+                    Sign-up
+                  </button>
+                </NavLink>
+                <NavLink href="/login">
+                  <button className="btn bg-blue-950 text-white">Login</button>
+                </NavLink>
+              </>
+            ) : (
+              <div className="flex items-center gap-3">
+                <h2>Hello, {user.name}</h2>
+                <button
+                  className="btn bg-blue-950 text-white"
+                  onClick={async () => await authClient.signOut()}
+                >
+                  Log Out
+                </button>
+              </div>
+            )}
           </div>
-
-          {/* <div className="flex gap-4"> */}
-          {/* {!user && (
-              <ul className="flex items-center  text-sm gap-5">
-                <li>
-                  <Link href={"/signup"}>SignUp</Link>
-                </li>
-                <li>
-                  <Link href={"/signin"}>SignIn</Link>
-                </li>
-              </ul>
-            )} */}
-
-          {/* {user && (
-              <div className="flex gap-3">
-                <Avatar size="sm">
-                  <Avatar.Image
-                    alt="John Doe"
-                    src={user?.image}
-                    referrerPolicy="no-referrer"
-                  />
-                  <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-                </Avatar>
-
-                <Button onClick={handleSignOut} size="sm" variant="danger">
-                  SignOut
-                </Button>
-              </div> */}
-          {/* )} */}
-          {/* </div> */}
         </nav>
       </div>
     </>

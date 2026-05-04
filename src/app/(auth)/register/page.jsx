@@ -12,19 +12,18 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm();
   const handleRegister = async (data) => {
-    console.log(data);
-
-    const { name, email, password, photoUrl } = data;
-
-    const { data: res, error } = await authClient.signIn.email({
-      name: name,
-      email: email,
-      password: password,
-      image: photoUrl,
+    const { data: res, error } = await authClient.signUp.email({
+      email: data.email,
+      password: data.password,
+      name: data.name,
+      image: data.photoUrl,
       callbackURL: "/",
     });
-
-    console.log(res, error);
+    if (error) {
+      console.error("Registration error:", error);
+    } else {
+      console.log("Registration successful:", res);
+    }
   };
   return (
     <>
