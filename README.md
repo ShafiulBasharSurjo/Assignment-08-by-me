@@ -1,86 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Tiles Gallery
+A modern, full-stack web application designed for browsing and managing a high-quality gallery of tile designs. This project serves as a practical implementation of local-first development workflows and secure authentication patterns.
 
-## Student requirement: My Profile page
+🚀 Purpose
+The Tiles Gallery project was created to provide a seamless interface for users to explore various tile patterns and textures. It serves as a learning platform for mastering Next.js App Router, integrating Better-Auth for identity management, and utilizing MongoDB Atlas for scalable cloud data storage.
 
-Build a **My Profile** page at route `/profile` that shows the currently logged-in user’s profile data and allows updating **name** and **image URL**.
+🔗 Live URL
+[Insert Your Vercel or Deployment Link Here]
 
-### What to show (read-only)
+✨ Key Features
+Secure Authentication: Full registration and login system powered by Better-Auth, supporting email and password credentials.
 
-- **User name** (from session user)
-- **User email** (from session user)
-- **User avatar/image** (from session user)
+Dynamic User Profiles: A dedicated "My Profile" page allowing logged-in users to view their session data and update their display name and profile image.
 
-### Update feature (required)
+Responsive Tile Gallery: A clean, grid-based UI built with Tailwind CSS and DaisyUI for optimal viewing on any device.
 
-- Add a form with two fields:
-  - **Name**
-  - **Image URL**
-- On submit, update the logged-in user using Better Auth:
+Real-time UI Updates: Utilization of react-hook-form for efficient, zero-refresh form handling and validation.
 
-```js
-await authClient.updateUser({
-  name,
-  image,
-});
-```
+Robust Backend: Integration with MongoDB Atlas via the Better-Auth MongoDB adapter for reliable user and data persistence.
 
-### Access control (required)
+📦 Tech Stack & NPM Packages
+Core Frameworks
+Next.js: The React framework for production.
 
-- If the user is **not logged in**, the page should show a message and a link/button to `/login`.
+React: For building the component-based user interface.
 
-## Getting Started
+Authentication & Database
+better-auth: A comprehensive authentication library for Next.js.
 
-First, run the development server:
+mongodb: Official MongoDB driver for Node.js.
 
-```bash
+@better-auth/mongodb-adapter: Specifically used to connect authentication flows to the MongoDB cluster.
+
+Styling & UI
+tailwindcss: Utility-first CSS framework for rapid UI development.
+
+daisyui: A component library for Tailwind CSS used for the avatar, buttons, and form layouts.
+
+lucide-react: For consistent and scalable iconography.
+
+Form Handling
+react-hook-form: Used to manage form state and validation in the Registration and Profile pages.
+
+🛠️ Local Development
+To run this project locally on your machine (e.g., Windows with Cursor):
+
+Clone the repository:
+
+Bash
+git clone https://github.com/ShafiulBasharSurjo/Assignment-08-by-me/blob/main/README.md
+Install dependencies:
+
+Bash
+npm install
+Configure Environment Variables:
+Create a .env file and include your MONGODB_URI, BETTER_AUTH_SECRET, and BETTER_AUTH_URL.
+
+Run the development server:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-### Environment variables (production)
-
-Set these in the Vercel project **Settings → Environment Variables** (Production + Preview as needed):
-
-| Variable | Purpose |
-| --- | --- |
-| `MONGODB_URI` | Better Auth MongoDB adapter |
-| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | Google OAuth |
-| `BETTER_AUTH_URL` | Public site URL, e.g. `https://your-app.vercel.app` (no trailing slash). Used for OAuth callbacks and server-side auth. |
-
-### Google OAuth after deploy
-
-In [Google Cloud Console](https://console.cloud.google.com/) → your OAuth client → **Authorized JavaScript origins**, add:
-
-- `https://your-app.vercel.app`
-
-Under **Authorized redirect URIs**, add:
-
-- `https://your-app.vercel.app/api/auth/callback/google`
-
-Use your real Vercel domain (and add preview URLs if you test preview deployments).
